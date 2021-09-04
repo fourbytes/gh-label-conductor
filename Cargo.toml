@@ -1,9 +1,10 @@
 [package]
 name = "gh-label-conductor"
 description = "A small CLI utility for bootstrapping GitHub project labels from a YAML file."
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license-file = "LICENSE"
+authors = ["Oscar R. <oscar@fourbs.com.au>"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

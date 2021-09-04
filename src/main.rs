@@ -6,7 +6,7 @@ use std::{collections::HashMap, env, fs::File, path::PathBuf, str::FromStr};
 
 use itertools::Itertools;
 use miette::{IntoDiagnostic, DiagnosticResult, Diagnostic};
-use clap::Clap;
+use clap::{Clap, AppSettings};
 use serde::{Serialize, Deserialize};
 use octorust::{Client, auth::Credentials, issues::Issues, types::{IssuesCreateLabelRequest, IssuesUpdateLabelRequest}};
 use tracing_subscriber::util::SubscriberInitExt;
@@ -64,6 +64,7 @@ enum SubCommand {
 }
 
 #[derive(Clap)]
+#[clap(version = env!("CARGO_PKG_VERSION"), author = env!("CARGO_PKG_AUTHORS"), setting = AppSettings::ColoredHelp)]
 struct Command {
     #[clap(short('f'), long, default_value = "common.yaml")]
     source_file: PathBuf,
