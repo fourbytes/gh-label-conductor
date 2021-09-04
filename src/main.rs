@@ -65,8 +65,8 @@ enum SubCommand {
 
 #[derive(Clap)]
 struct Command {
-    #[clap(long, default_value = "config.yaml")]
-    config_path: PathBuf,
+    #[clap(short('f'), long, default_value = "common.yaml")]
+    source_file: PathBuf,
 
     #[clap(subcommand)]
     subcmd: SubCommand
@@ -121,7 +121,7 @@ async fn main() -> DiagnosticResult<()> {
     setup_logging()?;
 
     let cmd = Command::parse();
-    let config: Config = serde_yaml::from_reader(File::open(cmd.config_path).into_diagnostic("config::open")?).into_diagnostic("config::parse")?;
+    let config: Config = serde_yaml::from_reader(File::open(cmd.source_file).into_diagnostic("config::open")?).into_diagnostic("config::parse")?;
     debug!(?config, "loaded config");
 
     match cmd.subcmd {

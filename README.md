@@ -1,5 +1,5 @@
 # gh-label-conductor
-Small command line utility for updating the labels on a GitHub project via a config file. Used to quickly bootstrap common and consistent labels on a project.
+Small command line utility for updating the labels on a GitHub project from a YAML file. Used to quickly bootstrap common and consistent labels on a project.
 
 ## Usage
 ```fish

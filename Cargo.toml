@@ -1,6 +1,6 @@
 [package]
 name = "gh-label-conductor"
-description = "A small CLI utility for updating GitHub project labels from a config file."
+description = "A small CLI utility for bootstrapping GitHub project labels from a YAML file."
 version = "0.1.0"
 edition = "2021"
 license-file = "LICENSE"

@@ -1,0 +1,32 @@
+name: Tests
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  clippy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: Swatinem/rust-cache@v1
+    - name: Run Clippy
+      run: cargo clippy
+
+  test:
+    runs-on: ubuntu-latest
+
+    container:
+      image: ghcr.io/slickbench/docker-rust-base:main
+      options: --security-opt seccomp=unconfined
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: Swatinem/rust-cache@v1
+    - name: Run Tests
+      run: cargo llvm-cov --all-features --lcov --output-path lcov.info
+    - name: Upload to codecov.io
+      uses: codecov/codecov-action@v2
+      with:
+        files: lcov.info
+        fail_ci_if_error: true
