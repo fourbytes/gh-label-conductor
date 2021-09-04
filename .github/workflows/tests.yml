@@ -11,6 +11,9 @@ jobs:
   clippy:
     runs-on: ubuntu-latest
 
+    container:
+      image: ghcr.io/slickbench/docker-rust-base:main
+
     steps:
     - uses: actions/checkout@v2
     - uses: Swatinem/rust-cache@v1
