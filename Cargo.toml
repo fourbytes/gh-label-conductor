@@ -2,7 +2,7 @@
 name = "gh-label-conductor"
 description = "A small CLI utility for bootstrapping GitHub project labels from a YAML file."
 version = "0.1.1"
-edition = "2021"
+edition = "2018"
 license-file = "LICENSE"
 authors = ["Oscar R. <oscar@fourbs.com.au>"]
 
