@@ -1,15 +1,12 @@
 # gh-label-conductor
 
 [![Crates.io][crates-badge]][crates-url]
-[![Documentation][docs-badge]][docs-url]
 [![MIT licensed][mit-badge]][mit-url]
 [![Build Status][actions-badge]][actions-url]
 [![Coverage][codecov-badge]][codecov-url]
 
 [crates-badge]: https://img.shields.io/crates/v/gh-label-conductor.svg
 [crates-url]: https://crates.io/crates/gh-label-conductor
-[docs-badge]: https://docs.rs/gh-label-conductor/badge.svg
-[docs-url]: https://docs.rs/gh-label-conductor
 [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [mit-url]: LICENSE
 [actions-badge]: https://github.com/fourbytes/gh-label-conductor/actions/workflows/tests.yml/badge.svg
