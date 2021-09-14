@@ -696,9 +696,9 @@ dependencies = [
 
 [[package]]
 name = "octorust"
-version = "0.1.28"
+version = "0.1.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fea23eaa6c53aa45224b3aca54eee5549e0ff35a8330522ffa03788c1db6d4e8"
+checksum = "d71ff16872b9dc26b903229ca6665f0383fd1f4947c6ce5309c6c262832c2caa"
 dependencies = [
  "anyhow",
  "async-recursion",
