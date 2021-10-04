@@ -20,6 +20,6 @@ itertools = "0.10"
 tracing = "0.1"
 tracing-subscriber = { version = "0.2", features = ["parking_lot"] }
 
-miette = "1"
+miette = "3"
 thiserror = "1"
 anyhow = "1"
